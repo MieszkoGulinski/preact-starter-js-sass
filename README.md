@@ -2,6 +2,13 @@
 
 This is a simple starter for a Preact + Redux app. It handles only JS and SCSS compilation. It doesn't handle anything server-side. It also doesn't have any built-in unit testing. It also doesn't have hot module replacement.
 
+[Preact](https://preactjs.com/) is a JavaScript library to build user interfaces. It's very similar to [React](https://reactjs.org/), but is much smaller.
+[Sass](https://sass-lang.com/) is a stylesheet language (actually two) that compile to CSS files. Here we're using [node-sass](https://github.com/sass/node-sass) implementation.
+
+The reason for
+
+## How to run
+
 Install packages:
 ```
 npm install
@@ -11,7 +18,13 @@ To build files in development mode:
 ```
 npm run build-dev
 ```
-It'll use `src/app.js` and `src/scss/app.scss` as entry points, and generate
+It'll use `src/app.js` and `src/scss/app.scss` as entry points, and generate `dist/bundle.js` and `dist/styles.css` files.
+
+To watch files in development mode:
+```
+npm run watch
+```
+It'll generate the files as previous command, but it'll also watch for changes in source files and when they change, it'll generate the output ones again.
 
 To build files in production mode - this performs minification of JavaScript:
 ```
